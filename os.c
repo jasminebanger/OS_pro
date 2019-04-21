@@ -1,13 +1,13 @@
 //Program starts
 #include<stdio.h>
 
-
 struct process
 {
       char process_name; //declaration for the name of process
       int arrival_time, burst_time, ct, waiting_time, turnaround_time, priority;
       int status; //declaration of status of process
-}process_queue[10]; //declare the queue for processes
+}
+process_queue[10]; //declare the queue for processes
 
 int limit; //declaration for the total number of process
 // creating a function which is called by another
@@ -65,7 +65,7 @@ void main()
             time = time + process_queue[largest].burst_time; //initialize time
             process_queue[largest].ct = time;
             process_queue[largest].waiting_time = process_queue[largest].ct - process_queue[largest].arrival_time - process_queue[largest].burst_time; //calculate waiting time for each process
-            process_queue[largest].turnaround_time = process_queue[largest].ct - process_queue[largest].arrival_time;
+            process_queue[largest].turnaround_time = process_queue[largest].ct - process_queue[largest].arrival_time; 
             process_queue[largest].status = 1; // initialize status=1
             wait_time = wait_time + process_queue[largest].waiting_time; // calculate waiting time
             turnaround_time = turnaround_time + process_queue[largest].turnaround_time; //calculate turnaround time
