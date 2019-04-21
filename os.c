@@ -1,4 +1,6 @@
+//Program starts
 #include<stdio.h>
+
 
 struct process
 {
@@ -74,3 +76,4 @@ void main()
       printf("\n\nAverage waiting time:\t%f\n", average_waiting_time); //print average waiting time
       printf("Average Turnaround Time:\t%f\n", average_turnaround_time); // print average turnaround time
 }
+//Program ends
